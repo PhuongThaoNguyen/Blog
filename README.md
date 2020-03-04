@@ -7,6 +7,8 @@ In the project directory, you can run:
 ### `MongoDB`
 
 First of all, you must have mongoDB and start service mongodb to backend connect with mongodb
+Ubuntu
+sudo systemctl start mongod
 
 ### `Back End`
 - Open terminal and type cd /my-project/backend

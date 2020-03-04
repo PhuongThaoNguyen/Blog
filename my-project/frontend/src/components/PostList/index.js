@@ -69,6 +69,14 @@ export class PostList extends Component {
   }
 }
 
-const mapStateToProps = ({ post }) => ({ postList:  post.postList});
+// const mapStateToProps = ({ post }) => ({ postList:  post.postList});
+const mapStateToProps = ({ post }) => {
+  const postSort = post.postList.sort((a, b) => new Date(b.createAt) - new Date(a.createAt));
+
+  return {
+    postList: postSort
+  }
+}
+
 
 export default connect(mapStateToProps, { get_post })(PostList);
